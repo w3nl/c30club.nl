@@ -2,6 +2,12 @@
 
 Static website for Volvo C30 Club NL.
 
+## Validation
+
+Run all project checks with:
+
+- `npm run validate`
+
 ## AI Working Agreements
 
 Repository-specific instructions for coding agents are documented in:

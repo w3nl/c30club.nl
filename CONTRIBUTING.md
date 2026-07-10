@@ -25,7 +25,7 @@ Read these first:
 ## Quality Check
 Run before opening a PR:
 
-- npm run lint
+- npm run validate
 
 ## GitHub Templates
 - Create task requests with .github/ISSUE_TEMPLATE/agent-task.md

@@ -7,7 +7,7 @@ Explain what changed and why.
 
 ## Checklist
 - [ ] I followed repository instructions in AGENTS.md and .github/copilot-instructions.md
-- [ ] `npm run lint` passes locally or in CI
+- [ ] `npm run validate` passes locally or in CI
 - [ ] No external runtime dependencies were added
 - [ ] Paths remain explicit relative paths (`./...`) where applicable
 - [ ] Navigation links point to existing sections

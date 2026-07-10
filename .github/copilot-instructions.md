@@ -23,7 +23,7 @@ Use these repository-specific rules when editing this project.
 - Do not reintroduce removed sections (for example contact form) without request.
 
 ## Validation Checklist
-- npm run lint passes.
+- npm run validate passes.
 - Navigation links still point to existing sections.
 - Referenced images/files exist.
 - No obvious regressions in docs/index.html behavior.

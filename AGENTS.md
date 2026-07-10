@@ -16,8 +16,8 @@ This repository is a static website for Volvo C30 Club NL.
 - Keep JavaScript lint-clean with ESLint and @trojs/lint setup.
 
 ## Lint And CI
-- Run lint locally with:
-  - npm run lint
+- Run checks locally with:
+  - npm run validate
   - npm run lint:fix
 - CI lint workflow is in .github/workflows/lint.yml.
 - Keep docs/main.js compliant with current lint rules.

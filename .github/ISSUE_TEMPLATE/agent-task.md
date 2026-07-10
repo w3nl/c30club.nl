@@ -21,7 +21,7 @@ List relevant paths (for example docs/index.html, docs/styles.css, docs/main.js)
 
 ## Acceptance Criteria
 - [ ] Requested change is implemented
-- [ ] `npm run lint` passes
+- [ ] `npm run validate` passes
 - [ ] Navigation links point to existing sections
 - [ ] Referenced local files/images exist
 
