@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project Working Agreements
+    url: https://github.com/w3nl/c30club.nl/blob/main/AGENTS.md
+    about: Read project-specific AI and coding agreements first.

@@ -1,14 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img"
+  aria-labelledby="title desc">
   <title id="title">Tour route illustration</title>
   <desc id="desc">A winding route line with map pins.</desc>
-  <rect width="800" height="600" fill="#f4efe6"/>
-  <path d="M95 500C190 380 260 520 350 420C430 332 490 420 560 330C610 266 668 300 724 184" fill="none" stroke="#375a7f" stroke-width="22" stroke-linecap="round" stroke-dasharray="10 20"/>
+  <rect width="800" height="600" fill="#f4efe6" />
+  <path d="M95 500C190 380 260 520 350 420C430 332 490 420 560 330C610 266 668 300 724 184"
+    fill="none" stroke="#375a7f" stroke-width="22" stroke-linecap="round" stroke-dasharray="10 20" />
   <g fill="#b84f2c">
-    <path d="M95 500c0-34 26-62 58-62s58 28 58 62c0 47-58 95-58 95s-58-48-58-95z" transform="translate(-58 -95)"/>
-    <path d="M405 322c0-34 26-62 58-62s58 28 58 62c0 47-58 95-58 95s-58-48-58-95z" transform="translate(-58 -95)"/>
-    <path d="M666 184c0-34 26-62 58-62s58 28 58 62c0 47-58 95-58 95s-58-48-58-95z" transform="translate(-58 -95)"/>
+    <path d="M95 500c0-34 26-62 58-62s58 28 58 62c0 47-58 95-58 95s-58-48-58-95z"
+      transform="translate(-58 -95)" />
+    <path d="M405 322c0-34 26-62 58-62s58 28 58 62c0 47-58 95-58 95s-58-48-58-95z"
+      transform="translate(-58 -95)" />
+    <path d="M666 184c0-34 26-62 58-62s58 28 58 62c0 47-58 95-58 95s-58-48-58-95z"
+      transform="translate(-58 -95)" />
   </g>
-  <circle cx="95" cy="500" r="18" fill="#fff"/>
-  <circle cx="405" cy="322" r="18" fill="#fff"/>
-  <circle cx="666" cy="184" r="18" fill="#fff"/>
+  <circle cx="95" cy="500" r="18" fill="#fff" />
+  <circle cx="405" cy="322" r="18" fill="#fff" />
+  <circle cx="666" cy="184" r="18" fill="#fff" />
 </svg>

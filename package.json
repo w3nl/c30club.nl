@@ -1,0 +1,38 @@
+{
+    "name": "c30club.nl",
+    "version": "1.0.0",
+    "description": "Static website for Volvo C30 Club NL",
+    "private": true,
+    "author": {
+        "name": "Pieter Wigboldus",
+        "url": "https://c30club.nl/"
+    },
+    "type": "module",
+    "scripts": {
+        "lint": "eslint docs/**/*.js",
+        "lint:fix": "eslint docs/**/*.js --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/w3nl/c30club.nl.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/w3nl/c30club.nl/issues"
+    },
+    "homepage": "https://github.com/w3nl/c30club.nl#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.19.0",
+        "@trojs/lint": "^0.4.4",
+        "eslint": "^9.19.0"
+    },
+    "engines": {
+        "node": ">= 24"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/w3nl"
+    }
+}
