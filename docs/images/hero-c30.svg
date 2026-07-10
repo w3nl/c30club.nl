@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized Volvo C30 side profile</title>
+  <desc id="desc">A minimal illustration of a hatchback on a warm gradient background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7eee2"/>
+      <stop offset="100%" stop-color="#dce8f3"/>
+    </linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f3850"/>
+      <stop offset="100%" stop-color="#345c7d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <ellipse cx="600" cy="560" rx="430" ry="52" fill="#7e8a95" opacity="0.25"/>
+  <path d="M235 460L310 372C342 337 388 316 437 316H734C763 316 791 325 813 342L895 407C914 423 925 445 925 468V472H235Z" fill="url(#car)"/>
+  <path d="M402 337H718C742 337 766 345 785 359L854 414H345L397 352C400 348 401 343 402 337Z" fill="#9fc1d7" opacity="0.85"/>
+  <path d="M536 337V414" stroke="#1f3850" stroke-width="10" opacity="0.45"/>
+  <circle cx="375" cy="475" r="66" fill="#152837"/>
+  <circle cx="375" cy="475" r="33" fill="#c8d1d7"/>
+  <circle cx="786" cy="475" r="66" fill="#152837"/>
+  <circle cx="786" cy="475" r="33" fill="#c8d1d7"/>
+  <rect x="875" y="430" width="44" height="18" rx="6" fill="#f7b17b"/>
+  <rect x="239" y="430" width="26" height="16" rx="5" fill="#f7e08e"/>
+</svg>
