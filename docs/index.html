@@ -5,393 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Volvo C30 Club NL</title>
-    <meta name="description" content="Volvo C30 Club NL - ritten, meetings en alles voor liefhebbers van de Volvo C30.">
-    <style>
-        :root {
-            --ink: #1c2b36;
-            --ink-soft: #425765;
-            --paper: #f9f5ee;
-            --sand: #efe3d1;
-            --accent: #b74d2f;
-            --accent-2: #315a7a;
-            --card: rgba(255, 255, 255, 0.8);
-            --line: rgba(28, 43, 54, 0.15);
-            --shadow: 0 16px 40px rgba(28, 43, 54, 0.15);
-            --radius: 20px;
-            --wrap: min(1100px, 92vw);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            color: var(--ink);
-            background:
-                radial-gradient(1300px 700px at 10% -5%, #f5dfcb 0%, rgba(245, 223, 203, 0) 70%),
-                radial-gradient(1100px 600px at 100% 0%, #d7e7f6 0%, rgba(215, 231, 246, 0) 65%),
-                var(--paper);
-            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", sans-serif;
-            line-height: 1.5;
-        }
-
-        h1,
-        h2,
-        h3,
-        .brand {
-            font-family: "Georgia", "Times New Roman", serif;
-            letter-spacing: 0.01em;
-            line-height: 1.15;
-            margin: 0;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .skip-link {
-            position: absolute;
-            left: -9999px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-
-        .skip-link:focus {
-            left: 1rem;
-            top: 1rem;
-            width: auto;
-            height: auto;
-            padding: 0.6rem 1rem;
-            background: #fff;
-            z-index: 999;
-            border-radius: 8px;
-            border: 1px solid var(--line);
-        }
-
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            backdrop-filter: blur(8px);
-            background: rgba(249, 245, 238, 0.85);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .header-inner {
-            width: var(--wrap);
-            margin: 0 auto;
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.8rem);
-        }
-
-        .brand small {
-            display: block;
-            font-size: 0.72em;
-            color: var(--ink-soft);
-            font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .nav a {
-            font-size: 0.95rem;
-            color: var(--ink-soft);
-            padding: 0.35rem 0.2rem;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease, color 0.2s ease;
-        }
-
-        .nav a:hover,
-        .nav a:focus-visible {
-            color: var(--ink);
-            border-color: var(--accent);
-            outline: none;
-        }
-
-        .button {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            border: 0;
-            border-radius: 999px;
-            padding: 0.65rem 1.15rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.15s ease, filter 0.2s ease;
-        }
-
-        .button:hover,
-        .button:focus-visible {
-            transform: translateY(-1px);
-            filter: brightness(1.06);
-            outline: none;
-        }
-
-        main {
-            width: var(--wrap);
-            margin: 0 auto;
-            padding: 2rem 0 3rem;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.05fr 1fr;
-            gap: 2rem;
-            align-items: center;
-            margin-top: 1rem;
-        }
-
-        .kicker {
-            margin: 0 0 0.55rem;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            font-size: 0.78rem;
-            color: var(--accent-2);
-            font-weight: 700;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 1.3rem + 3vw, 4rem);
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            margin: 0;
-            color: var(--ink-soft);
-            max-width: 48ch;
-            font-size: 1.05rem;
-        }
-
-        .hero-actions {
-            margin-top: 1.4rem;
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .button.ghost {
-            background: transparent;
-            color: var(--accent-2);
-            border: 1px solid rgba(49, 90, 122, 0.35);
-        }
-
-        .hero-art {
-            margin: 0;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--line);
-        }
-
-        .hero-art img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        section {
-            margin-top: 4rem;
-        }
-
-        section h2 {
-            font-size: clamp(1.55rem, 1.3rem + 1.3vw, 2.5rem);
-            margin-bottom: 0.55rem;
-        }
-
-        .section-intro {
-            margin: 0;
-            color: var(--ink-soft);
-            max-width: 65ch;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
-            margin-top: 1.25rem;
-        }
-
-        .card {
-            border-radius: 18px;
-            border: 1px solid var(--line);
-            background: var(--card);
-            padding: 1rem;
-            box-shadow: 0 8px 24px rgba(28, 43, 54, 0.08);
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            margin: 0;
-            color: var(--ink-soft);
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
-            margin-top: 1.25rem;
-        }
-
-        .gallery figure {
-            margin: 0;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--line);
-            background: #fff;
-        }
-
-        .gallery img {
-            display: block;
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-        }
-
-        .gallery figcaption {
-            padding: 0.7rem 0.85rem 0.85rem;
-            color: var(--ink-soft);
-            font-size: 0.92rem;
-        }
-
-        .join {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1.25rem;
-            align-items: stretch;
-        }
-
-        .join-panel,
-        .join-form {
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            background: var(--card);
-            padding: 1.1rem;
-            box-shadow: 0 8px 24px rgba(28, 43, 54, 0.08);
-        }
-
-        .join-panel ul {
-            margin: 0.75rem 0 0;
-            padding-left: 1rem;
-            color: var(--ink-soft);
-        }
-
-        .join-form label {
-            display: block;
-            margin-top: 0.8rem;
-            font-weight: 700;
-            color: var(--ink-soft);
-            font-size: 0.92rem;
-        }
-
-        .join-form input,
-        .join-form textarea {
-            display: block;
-            width: 100%;
-            margin-top: 0.35rem;
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 0.68rem 0.75rem;
-            font: inherit;
-            background: #fff;
-            color: var(--ink);
-        }
-
-        .join-form textarea {
-            min-height: 110px;
-            resize: vertical;
-        }
-
-        .status {
-            margin-top: 0.75rem;
-            min-height: 1.4em;
-            color: var(--accent-2);
-            font-weight: 700;
-        }
-
-        .site-footer {
-            width: var(--wrap);
-            margin: 0 auto;
-            border-top: 1px solid var(--line);
-            padding: 1.25rem 0 2.2rem;
-            color: var(--ink-soft);
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(14px);
-            animation: reveal-up 0.65s ease forwards;
-            animation-delay: calc(var(--stagger, 0) * 110ms);
-        }
-
-        @keyframes reveal-up {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 930px) {
-
-            .hero,
-            .join {
-                grid-template-columns: 1fr;
-            }
-
-            .cards,
-            .gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 640px) {
-            .header-inner {
-                min-height: 84px;
-                align-items: flex-start;
-                padding: 0.6rem 0;
-            }
-
-            .cards,
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery img {
-                height: auto;
-            }
-        }
-    </style>
+    <meta name="description" content="Volvo C30 Club NL - de spot voor ritten, meets en C30 vibes in Nederland.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -406,8 +21,6 @@
             <nav class="nav" aria-label="Hoofdmenu">
                 <a href="#over">Over</a>
                 <a href="#agenda">Agenda</a>
-                <a href="#gallery">Galerij</a>
-                <a class="button" href="#join">Meedoen</a>
             </nav>
         </div>
     </header>
@@ -415,151 +28,84 @@
     <main id="content">
         <section class="hero">
             <div>
-                <p class="kicker reveal" style="--stagger: 1;">Welkom thuis voor C30 liefhebbers</p>
-                <h1 class="reveal" style="--stagger: 2;">De Volvo C30 Club van Nederland</h1>
+                <p class="kicker reveal" style="--stagger: 1;">Dé plek voor C30 liefhebbers in Nederland</p>
+                <h1 class="reveal" style="--stagger: 2;">Volvo C30 Club NL</h1>
                 <p class="reveal" style="--stagger: 3;">
-                    Een eenvoudige basis voor jullie clubsite: nieuws, ritten, meetings en een plek waar iedereen met
-                    een C30
-                    makkelijk kan aansluiten.
+                    Samen rijden, mooie foto's maken en elkaar helpen met onderhoud, upgrades en alles rond de C30.
+                    Iedereen is welkom om aan te sluiten.
                 </p>
                 <div class="hero-actions reveal" style="--stagger: 4;">
-                    <a class="button" href="#agenda">Bekijk komende rit</a>
-                    <a class="button ghost" href="#join">Stel je voor</a>
+                    <a class="button" href="#agenda">Volgende rit</a>
                 </div>
             </div>
             <figure class="hero-art reveal" style="--stagger: 3;">
-                <img src="images/C30/IMG_20260710_095718130_HDR.jpg" alt="Volvo C30 tijdens een clubmoment op locatie.">
+                <img src="images/C30/IMG_20260530_151814659_HDR.jpg" alt="Volvo C30 tijdens een clubmoment op locatie.">
             </figure>
         </section>
 
         <section id="over">
             <h2>Over de club</h2>
             <p class="section-intro">
-                Volvo C30 Club NL is een laagdrempelige community voor eigenaren en fans. We organiseren ritten,
-                parkeren
-                samen op events en delen kennis over onderhoud, styling en upgrades.
+                Wij zijn een toegankelijke C30 community voor iedereen die van rijden en autoliefhebberij houdt.
+                Van meetings tot toertochten: je bent welkom, of je C30 nu origineel is of aangepast.
             </p>
             <div class="cards">
                 <article class="card reveal" style="--stagger: 1;">
                     <h3>Community</h3>
-                    <p>Vind andere C30 rijders in jouw regio en wissel tips uit over je auto.</p>
+                    <p>Kom in contact met C30 rijders in heel Nederland en deel je tips, vragen en ervaringen.</p>
                 </article>
                 <article class="card reveal" style="--stagger: 2;">
                     <h3>Meetups</h3>
-                    <p>Maandelijkse meetings en fotomomenten op mooie plekken door heel Nederland.</p>
+                    <p>Leuke locaties, mooie line-ups en fotomomenten met andere C30 liefhebbers.</p>
                 </article>
                 <article class="card reveal" style="--stagger: 3;">
                     <h3>Toertochten</h3>
-                    <p>Gezamenlijke routes met koffiestops en aandacht voor leuke stuurwegen.</p>
+                    <p>Toertochten met mooie routes, koffiestops en vooral gezellig samen rijden.</p>
                 </article>
             </div>
         </section>
 
         <section id="agenda">
             <h2>Komende activiteiten</h2>
-            <p class="section-intro">Vervang deze voorbeeld-items eenvoudig met jullie eigen planning.</p>
+            <p class="section-intro">Voorbeeldplanning: later vullen jullie hier jullie echte events in.</p>
             <div class="cards">
                 <article class="card">
                     <h3>Zondagrit Utrechtse Heuvelrug</h3>
-                    <p>Datum: 6 september 2026<br>Start: 10:00, Zeist<br>Route van 90 km met lunchstop.</p>
+                    <p>Datum: 6 september 2026<br>Start: 10:00, Zeist<br>90 km sturen + gezamenlijke lunchstop.</p>
                 </article>
                 <article class="card">
                     <h3>Avondmeet Rotterdam</h3>
-                    <p>Datum: 18 september 2026<br>Start: 19:30, Kralingse Plas<br>Informele clubavond en fotoshoot.</p>
+                    <p>Datum: 18 september 2026<br>Start: 19:30, Kralingse Plas<br>Avondmeeting, bijpraten en een korte
+                        shoot.</p>
                 </article>
                 <article class="card">
                     <h3>Techniekmiddag</h3>
-                    <p>Datum: 3 oktober 2026<br>Start: 13:00, Amersfoort<br>Basis onderhoud en onderdelenadvies.</p>
+                    <p>Datum: 3 oktober 2026<br>Start: 13:00, Amersfoort<br>DIY basics, onderhoud hacks en parts talk.
+                    </p>
                 </article>
             </div>
         </section>
 
-        <section id="gallery">
-            <h2>Sfeer van de club</h2>
-            <p class="section-intro">Echte clubfoto's uit jullie eigen map, direct geladen zonder externe dependencies.
-            </p>
-            <div class="gallery">
-                <figure>
-                    <img src="images/C30/IMG_20260530_191821315_HDR.jpg"
-                        alt="Volvo C30's geparkeerd tijdens een clubmeetup.">
-                    <figcaption>Gezamenlijke parkeerspots tijdens avondmeetups.</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/C30/IMG_20260530_191848628_HDR.jpg" alt="Volvo C30 tijdens een rit op route.">
-                    <figcaption>Routes met leuke wegen en geplande koffiestops.</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/C30/IMG_20260710_095743830_HDR.jpg"
-                        alt="Detailfoto van een Volvo C30 op een clubdag.">
-                    <figcaption>De C30 in het vizier: compact, eigenzinnig en tijdloos.</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section id="join">
-            <h2>Doe mee</h2>
-            <p class="section-intro">Geen backend nodig: dit formulier geeft een nette bevestiging in de browser.</p>
-            <div class="join">
-                <aside class="join-panel">
-                    <h3>Wat kun je verwachten?</h3>
-                    <ul>
-                        <li>Toegang tot ritten, meetings en clubnieuws.</li>
-                        <li>Kennisdeling over onderhoud en onderdelen.</li>
-                        <li>Een gezellige groep C30 liefhebbers uit heel NL.</li>
-                    </ul>
-                </aside>
-                <form class="join-form" id="join-form" novalidate>
-                    <label for="name">Naam</label>
-                    <input id="name" name="name" autocomplete="name" required>
-
-                    <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required>
-
-                    <label for="car">Jouw C30 (bouwjaar, motor of kleur)</label>
-                    <textarea id="car" name="car" placeholder="Bijv. 2008, 2.0D, Titanium Grey"></textarea>
-
-                    <button class="button" type="submit">Verstuur</button>
-                    <p class="status" id="form-status" aria-live="polite"></p>
-                </form>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
         <p>© <span id="year"></span> Volvo C30 Club NL</p>
-        <p>Gemaakt met plain HTML, CSS en JavaScript.</p>
+        <p>Built met pure HTML, CSS en JavaScript.</p>
     </footer>
 
-    <script>
-        (function () {
-            var yearNode = document.getElementById("year");
-            if (yearNode) {
-                yearNode.textContent = String(new Date().getFullYear());
-            }
+    <dialog class="lightbox" id="lightbox" aria-label="Fotoweergave">
+        <div class="lightbox-panel">
+            <div class="lightbox-top">
+                <button class="lightbox-close" id="lightbox-close" type="button">Sluiten</button>
+            </div>
+            <figure class="lightbox-view">
+                <img id="lightbox-image" src="" alt="">
+            </figure>
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </dialog>
 
-            var form = document.getElementById("join-form");
-            var status = document.getElementById("form-status");
-
-            if (form && status) {
-                form.addEventListener("submit", function (event) {
-                    event.preventDefault();
-
-                    var nameField = document.getElementById("name");
-                    var emailField = document.getElementById("email");
-                    var name = nameField && nameField.value ? nameField.value.trim() : "";
-                    var email = emailField && emailField.value ? emailField.value.trim() : "";
-
-                    if (!name || !email) {
-                        status.textContent = "Vul minimaal je naam en e-mail in.";
-                        return;
-                    }
-
-                    status.textContent = "Bedankt " + name + "! Je bericht staat klaar (koppel later een backend of mailservice).";
-                    form.reset();
-                });
-            }
-        })();
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
