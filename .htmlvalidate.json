@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "html-validate:recommended"
+    ],
+    "root": true,
+    "rules": {
+        "doctype-style": "off"
+    },
+    "elements": [
+        "html5"
+    ]
+}

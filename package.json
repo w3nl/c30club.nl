@@ -1,0 +1,46 @@
+{
+    "name": "c30club.nl",
+    "version": "1.0.0",
+    "description": "Static website for Volvo C30 Club NL",
+    "private": true,
+    "author": {
+        "name": "Pieter Wigboldus",
+        "url": "https://c30club.nl/"
+    },
+    "type": "module",
+    "scripts": {
+        "lint": "eslint docs/**/*.js",
+        "lint:fix": "eslint docs/**/*.js --fix",
+        "lint:html": "html-validate \"docs/**/*.html\"",
+        "lint:css": "stylelint \"docs/**/*.css\"",
+        "lint:md": "markdownlint-cli2",
+        "validate:rules": "node ./scripts/validate-rules.mjs",
+        "validate": "npm run lint && npm run lint:html && npm run lint:css && npm run lint:md && npm run validate:rules"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/w3nl/c30club.nl.git"
+    },
+    "keywords": [],
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/w3nl/c30club.nl/issues"
+    },
+    "homepage": "https://github.com/w3nl/c30club.nl#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.19.0",
+        "@trojs/lint": "^0.4.4",
+        "eslint": "^9.19.0",
+        "html-validate": "^11.5.5",
+        "markdownlint-cli2": "^0.23.0",
+        "stylelint": "^17.14.0",
+        "stylelint-config-standard": "^40.0.0"
+    },
+    "engines": {
+        "node": ">= 24"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/w3nl"
+    }
+}
