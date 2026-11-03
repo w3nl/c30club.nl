@@ -28,9 +28,9 @@
     },
     "homepage": "https://github.com/w3nl/c30club.nl#readme",
     "devDependencies": {
-        "@eslint/js": "^9.19.0",
+        "@eslint/js": "^10.0.0",
         "@trojs/lint": "^0.4.4",
-        "eslint": "^9.19.0",
+        "eslint": "^10.0.0",
         "html-validate": "^11.5.5",
         "markdownlint-cli2": "^0.23.0",
         "stylelint": "^17.14.0",
